@@ -1,0 +1,277 @@
+:root {
+    --bg-main: #02140b;
+    --bg-section: #041c10;
+    --accent-green: #1aff7a;
+    --accent-green-soft: #0f7a3f;
+    --text-main: #e5ffe9;
+    --text-muted: #9bbfa5;
+    --pixel-border: 3px solid #1aff7a;
+    --font-main: "Courier New", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #06331a 0%, #02140b 40%, #000000 100%);
+    color: var(--text-main);
+    font-family: var(--font-main);
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: var(--pixel-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--accent-green);
+}
+
+.nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    color: var(--accent-green);
+}
+
+/* Sections */
+
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 16px 60px;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--accent-green);
+}
+
+.section p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 40px 16px;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: var(--pixel-border);
+    text-decoration: none;
+    color: var(--accent-green);
+    font-size: 14px;
+    background: #000000;
+}
+
+.btn.primary {
+    background: var(--accent-green-soft);
+    color: #ffffff;
+}
+
+.btn.secondary {
+    background: transparent;
+}
+
+.btn.link {
+    margin: 6px;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+/* Hero visual */
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.character {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+    border: var(--pixel-border);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder pixel styles */
+
+.trader {
+    background: linear-gradient(135deg, #0f7a3f 20%, #1aff7a 40%, #06331a 60%, #000000 100%);
+    position: relative;
+}
+
+.trader::after {
+    content: "TRADER";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.islander {
+    background: linear-gradient(135deg, #1aff7a 20%, #0f7a3f 40%, #06331a 60%, #000000 100%);
+    position: relative;
+}
+
+.islander::after {
+    content: "CPS";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.arrow {
+    font-size: 24px;
+    color: var(--accent-green);
+}
+
+/* Timeline */
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.step {
+    border: var(--pixel-border);
+    padding: 10px;
+    background: var(--bg-section);
+}
+
+.step h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--accent-green);
+}
+
+.step p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Tokenomics */
+
+.token-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.token-card {
+    border: var(--pixel-border);
+    padding: 10px;
+    background: var(--bg-section);
+}
+
+/* Roadmap */
+
+.roadmap-list {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.roadmap-list li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+/* Links */
+
+.links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 20px 16px 40px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-visual {
+        margin-top: 20px;
+    }
+
+    .timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .token-grid {
+        grid-template-columns: 1fr;
+    }
+}
