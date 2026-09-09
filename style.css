@@ -276,34 +276,15 @@ body {
     }
 }
 
-/* Sprite de base */
-.sprite {
+.pixel-sprite {
   width: 64px;
   height: 64px;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  image-rendering: pixelated;
 }
 
-/* === TRADER PIXEL === */
-.trader-sprite {
-  background:
-    radial-gradient(circle at 50% 20%, #0f7a3f 10%, transparent 11%),
-    linear-gradient(#06331a 40%, #000000 60%),
-    linear-gradient(to right, #1aff7a 60%, transparent 61%);
-  background-size: 100% 100%;
-  border: 3px solid #1aff7a;
-  box-shadow: 0 0 8px #1aff7a;
-}
-
-/* === CPS PIXEL === */
-.cps-sprite {
-  background:
-    radial-gradient(circle at 50% 20%, #1aff7a 10%, transparent 11%),
-    linear-gradient(#0f7a3f 40%, #06331a 60%),
-    linear-gradient(to right, #1aff7a 60%, transparent 61%);
-  background-size: 100% 100%;
-  border: 3px solid #1aff7a;
-  box-shadow: 0 0 8px #1aff7a;
+.pixel-sprite div {
+  width: 100%;
+  height: 100%;
 }
